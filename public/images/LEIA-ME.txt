@@ -1,0 +1,8 @@
+Imagens do site.
+
+Arquivo esperado:
+
+  ygor.jpg   — retrato usado na seção "Sobre mim"
+
+Proporção ideal: 4:5 (ex.: 800x1000). O caminho já está configurado em
+src/config/site.ts. Sem o arquivo, aparece um placeholder no lugar.

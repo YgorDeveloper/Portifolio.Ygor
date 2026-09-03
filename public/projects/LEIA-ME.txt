@@ -1,0 +1,14 @@
+Capas dos projetos.
+
+Arquivos esperados (os caminhos já estão configurados em src/data/projects.ts):
+
+  velse.png
+  lemos-fit.png
+  rota-100.png
+  mineiro-motos.png
+
+Enquanto o arquivo não existir, o card usa uma capa gerada com o nome do
+projeto — nada fica quebrado.
+
+Logos: exporte com fundo transparente (PNG). Capturas de tela: proporção 16:10
+(ex.: 1600x1000) e troque `imageFit` para "cover" no projeto correspondente.
