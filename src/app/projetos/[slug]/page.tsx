@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, ArrowUpRight, FileText } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -68,12 +68,6 @@ export default async function ProjectPage({ params }: Props) {
 
   const proseBlocks = prose.filter((block) => Boolean(block.content));
   const listBlocks = lists.filter((block) => Boolean(block.items?.length));
-
-  /* Blocos ainda não preenchidos viram um aviso único, em vez de vazios. */
-  const pending = [
-    ...prose.filter((block) => !block.content),
-    ...lists.filter((block) => !block.items?.length),
-  ].map((block) => block.label.toLowerCase());
 
   return (
     <article className="pt-28 pb-24 md:pt-36 md:pb-32">
@@ -237,21 +231,6 @@ export default async function ProjectPage({ params }: Props) {
               </Reveal>
             ) : null}
 
-            {pending.length > 0 ? (
-              <Reveal delay={0.08}>
-                {/* Espaço reservado: preencha `caseStudy` em src/data/projects.ts */}
-                <section className="mt-14 rounded-xl border border-dashed border-line-strong bg-surface/30 p-6">
-                  <h2 className="flex items-center gap-2.5 font-mono text-[11px] tracking-[0.2em] text-subtle uppercase">
-                    <FileText className="size-3.5" strokeWidth={1.5} />
-                    Em documentação
-                  </h2>
-                  <p className="mt-3 text-sm leading-relaxed text-subtle">
-                    Este case study ainda será complementado com{" "}
-                    {pending.join(", ")}.
-                  </p>
-                </section>
-              </Reveal>
-            ) : null}
           </div>
 
           {/* Ficha técnica */}

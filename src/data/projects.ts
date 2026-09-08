@@ -84,6 +84,8 @@ export const projects: Project[] = [
       { src: "/projects/shots/velse-carrinho.jpg", alt: "Sacola de compras antes do checkout", caption: "Sacola" },
     ],
     caseStudy: {
+      result:
+        "A venda deixou de depender de conversa: preço, numeração disponível e prazo aparecem antes de a pessoa precisar perguntar, e o webhook confirma o pagamento sem ninguém acompanhando. O WhatsApp saiu do funil de venda e ficou só como suporte.",
       problem:
         "O modelo anterior era venda sob consulta, com orçamento negociado por WhatsApp — um funil que dependia de conversa a cada pedido.",
       solution:
@@ -125,6 +127,8 @@ export const projects: Project[] = [
        público, descomente e o botão volta a aparecer. */
     // github: "https://github.com/YgorDeveloper/lemos-fit-loja",
     caseStudy: {
+      result:
+        "O pedido passou a se fechar sozinho, sem a troca de mensagens que antecedia cada compra. E o estoque passou a existir por tamanho dentro do sistema, em vez de ser contado de memória — o painel mostra do celular o que vendeu, o que está pendente e o que está acabando.",
       problem:
         "Toda venda passava pelo direct do Instagram: perguntar preço, combinar pagamento, acertar a entrega e anotar o pedido à mão. O estoque vivia fora de qualquer sistema, contado de memória.",
       solution:
@@ -168,6 +172,8 @@ export const projects: Project[] = [
        público, descomente e o botão volta a aparecer. */
     // github: "https://github.com/YgorDeveloper/rota-100",
     caseStudy: {
+      result:
+        "O turno fecha com número: saldo inicial, entradas, saídas e saldo atual saem do que foi registrado durante o serviço, não da conferência de fim de noite. Comanda, fiado e venda passaram a viver no mesmo lugar, e o backup roda sozinho todo dia.",
       problem:
         "A operação dependia de anotação manual: comanda em papel, fiado no caderno e conferência de caixa no fim do turno sem uma base confiável para comparar.",
       solution:
@@ -218,6 +224,8 @@ export const projects: Project[] = [
        público, descomente e o botão volta a aparecer. */
     // github: "https://github.com/YgorDeveloper/mineiro-motos",
     caseStudy: {
+      result:
+        "A ordem de serviço ganhou estado explícito, do orçamento à entrega, então dá para ver num relance o que está parado esperando aprovação e o que está na bancada. Estoque e contas a receber saíram do caderno e passaram a ter histórico.",
       problem:
         "A oficina se organizava entre caderno e conversas de WhatsApp, sem visibilidade das ordens de serviço em andamento, do estoque de peças ou do que havia a receber.",
       solution:

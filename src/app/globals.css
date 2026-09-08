@@ -78,6 +78,9 @@
   }
 
   html {
+    /* `clip` e não `hidden`: hidden criaria contexto de rolagem e quebraria
+       os elementos `sticky` da página. Nada pode vazar na horizontal. */
+    overflow-x: clip;
     scroll-behavior: smooth;
     /* Compensa a navbar fixa ao navegar por âncoras. */
     scroll-padding-top: 6rem;
@@ -89,7 +92,7 @@
     color: var(--fg);
     font-family: var(--font-sans);
     /* Nenhuma seção deve provocar rolagem horizontal. */
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   ::selection {

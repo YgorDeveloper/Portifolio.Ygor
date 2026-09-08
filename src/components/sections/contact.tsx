@@ -35,7 +35,7 @@ export function Contact() {
       </Reveal>
 
       <div className="grid gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
-        <Reveal>
+        <Reveal className="min-w-0">
           <div className="lg:sticky lg:top-28">
             {siteConfig.availability.available ? (
               <p className="inline-flex items-center gap-2.5 rounded-full border border-line bg-surface/60 py-1.5 pr-4 pl-3 font-mono text-[11px] tracking-[0.08em] text-muted uppercase">
@@ -65,7 +65,7 @@ export function Contact() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.08}>
+        <Reveal delay={0.08} className="min-w-0">
           <ul className="overflow-hidden rounded-2xl border border-line">
             {activeSocialLinks.map((link, index) => {
               const Icon = socialIcons[link.key];
