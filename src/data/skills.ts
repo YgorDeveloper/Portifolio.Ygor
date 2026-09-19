@@ -59,12 +59,3 @@ export const skillGroups: SkillGroup[] = [
     items: ["Git", "GitHub", "VS Code", "Claude Code"],
   },
 ];
-
-/** Recorte exibido na ficha do hero — as tecnologias mais presentes no dia a dia. */
-export const featuredStack = [
-  "Next.js",
-  "TypeScript",
-  "Node.js",
-  "PostgreSQL",
-  "Cloudflare",
-];

@@ -10,7 +10,7 @@ import { siteConfig } from "@/config/site";
 
 import "./globals.css";
 
-const title = `${siteConfig.name} — ${siteConfig.role}`;
+const title = `${siteConfig.brand} — ${siteConfig.tagline}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -23,15 +23,15 @@ export const metadata: Metadata = {
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   keywords: [
-    "Ygor Dias",
-    "desenvolvedor",
-    "suporte técnico",
-    "sistemas",
-    "integrações",
+    "desenvolvimento web",
+    "criação de sites",
+    "e-commerce",
+    "landing page",
+    "sistema de gestão",
+    "agendamento online",
     "Next.js",
-    "TypeScript",
     "Cloudflare",
-    "portfólio",
+    "Brasília",
   ],
   alternates: {
     canonical: "/",

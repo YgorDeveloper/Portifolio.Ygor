@@ -7,10 +7,10 @@ export function Projects() {
   return (
     <Section
       id="projetos"
-      index="03"
+      index="01"
       label="Projetos"
-      title="O que eu construí."
-      description="Produtos e sistemas em que trabalhei — do catálogo de uma loja à comunicação entre serviços e equipamentos. Cada card abre um detalhamento do projeto."
+      title="Projetos no portfólio."
+      description="Lojas, sites e sistemas em produção — do catálogo de sneakers à agenda de uma clínica. Cada card abre o case completo."
     >
       <div className="flex flex-col gap-5 lg:gap-6">
         {projects.map((project, index) => (

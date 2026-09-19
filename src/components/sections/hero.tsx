@@ -2,17 +2,16 @@ import { ArrowDown, ArrowUpRight } from "lucide-react";
 
 import { buttonVariants } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
-import { ProfileCard } from "@/components/ui/profile-card";
 import { SocialRow } from "@/components/ui/social-row";
+import { WorkStack } from "@/components/ui/work-stack";
 import { siteConfig } from "@/config/site";
-
 
 export function Hero() {
   return (
     <section
       id="top"
       aria-label="Apresentação"
-      className="relative flex min-h-[100svh] items-center overflow-hidden pt-28 pb-14 md:pt-32 md:pb-28"
+      className="relative flex min-h-[100svh] items-center overflow-hidden pt-28 pb-14 md:pt-32 md:pb-24"
     >
       {/* Plano de fundo: malha técnica + brilho discreto */}
       <div
@@ -35,9 +34,8 @@ export function Hero() {
       />
 
       <div className="container-page relative">
-        <div className="grid items-center gap-10 sm:gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16">
-          {/* Coluna de conteúdo */}
-          <div>
+        <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-14">
+          <div className="min-w-0">
             {siteConfig.availability.available ? (
               <Reveal>
                 <p className="inline-flex items-center gap-2.5 rounded-full border border-line bg-surface/60 py-1.5 pr-4 pl-3 font-mono text-[11px] tracking-[0.08em] text-muted uppercase">
@@ -50,32 +48,21 @@ export function Hero() {
               </Reveal>
             ) : null}
 
-            <Reveal delay={0.05}>
-              <p className="mt-8 font-mono text-sm text-subtle">Olá, eu sou</p>
-            </Reveal>
-
-            <Reveal delay={0.1}>
-              <h1 className="text-gradient mt-2 pb-[0.28em] text-[clamp(2.75rem,9vw,5rem)] leading-[1.02] font-medium tracking-[-0.04em]">
-                Ygor Dias
+            <Reveal delay={0.08}>
+              <h1 className="text-gradient mt-7 pb-[0.2em] text-[clamp(2.25rem,6.2vw,4.25rem)] leading-[1.02] font-medium tracking-[-0.035em]">
+                Sites, lojas e sistemas que trabalham pelo seu negócio.
               </h1>
             </Reveal>
 
             <Reveal delay={0.16}>
-              <p className="mt-2 max-w-xl text-xl leading-snug font-medium tracking-[-0.01em] text-fg sm:text-2xl">
-                Profissional de Tecnologia{" "}
-                <span className="text-accent">&</span> Desenvolvedor
+              <p className="mt-3 max-w-xl text-base leading-relaxed text-muted md:text-lg">
+                Do site institucional ao sistema de gestão: o estúdio desenha,
+                desenvolve e publica — com agenda, checkout e painel quando o
+                negócio pede.
               </p>
             </Reveal>
 
-            <Reveal delay={0.22}>
-              <p className="mt-5 max-w-xl text-base leading-relaxed text-muted md:text-[1.0625rem]">
-                Atuo com suporte, sistemas, integrações e desenvolvimento de
-                soluções digitais, transformando problemas reais em soluções
-                funcionais e eficientes.
-              </p>
-            </Reveal>
-
-            <Reveal delay={0.28}>
+            <Reveal delay={0.24}>
               <div className="mt-9 flex flex-wrap items-center gap-3">
                 <a href="#projetos" className={buttonVariants({ size: "lg" })}>
                   Ver projetos
@@ -85,29 +72,28 @@ export function Hero() {
                   href="#contato"
                   className={buttonVariants({ variant: "secondary", size: "lg" })}
                 >
-                  Entre em contato
+                  Falar sobre um projeto
                 </a>
               </div>
             </Reveal>
 
-            <Reveal delay={0.34}>
+            <Reveal delay={0.3}>
               <SocialRow className="mt-9" />
             </Reveal>
           </div>
 
-          {/* Coluna visual */}
-          <Reveal delay={0.18} className="lg:pl-4">
-            <ProfileCard />
+          <Reveal delay={0.14} className="min-w-0">
+            <WorkStack />
           </Reveal>
         </div>
       </div>
 
       <a
-        href="#sobre"
-        aria-label="Ir para a seção sobre mim"
+        href="#projetos"
+        aria-label="Ir para os projetos"
         className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 items-center gap-2 font-mono text-[11px] tracking-[0.18em] text-subtle uppercase transition-colors duration-200 hover:text-fg lg:flex"
       >
-        Explorar
+        Projetos
         <ArrowDown className="size-3.5" />
       </a>
     </section>

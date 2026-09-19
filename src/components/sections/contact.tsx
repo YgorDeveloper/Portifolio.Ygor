@@ -5,7 +5,6 @@ import { Reveal } from "@/components/ui/reveal";
 import { Section } from "@/components/ui/section";
 import { socialIcons } from "@/components/ui/social-icon";
 import { activeSocialLinks, siteConfig } from "@/config/site";
-import { services } from "@/data/services";
 
 export function Contact() {
   const primary = activeSocialLinks.find((link) => link.key === "email");
@@ -13,27 +12,11 @@ export function Contact() {
   return (
     <Section
       id="contato"
-      index="04"
+      index="05"
       label="Contato"
-      title="Vamos construir algo?"
-      description="Tem uma ideia, projeto ou oportunidade? Entre em contato."
+      title="Tem um projeto em mente?"
+      description="Conte o que o seu negócio precisa. A resposta vem com um próximo passo, não com um orçamento genérico."
     >
-      {/* O que faço — antes era uma seção inteira; aqui cabe em uma linha. */}
-      <Reveal>
-        <ul className="mb-12 grid gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((service) => (
-            <li key={service.id} className="bg-bg px-4 py-3.5">
-              <span className="block text-sm font-medium text-fg">
-                {service.title}
-              </span>
-              <span className="mt-1 block text-[13px] leading-snug text-subtle">
-                {service.description}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </Reveal>
-
       <div className="grid gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
         <Reveal className="min-w-0">
           <div className="lg:sticky lg:top-28">
@@ -48,9 +31,9 @@ export function Contact() {
             ) : null}
 
             <p className="mt-6 max-w-md text-base leading-relaxed text-muted">
-              Respondo pelo canal que for mais prático para você. Se puder,
-              mande o contexto do projeto logo no primeiro contato: assim
-              consigo retornar com algo útil já na primeira mensagem.
+              Use o canal que for mais prático para você. Se puder, mande o
+              contexto do projeto já no primeiro contato — o que o negócio faz
+              e o que precisa funcionar — para a resposta vir com algo útil.
             </p>
 
             {primary ? (

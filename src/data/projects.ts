@@ -101,44 +101,44 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "lemos-fit",
-    title: "Lemos Fit",
-    category: "E-commerce",
+    slug: "dra-nath-harmonier",
+    title: "Drª Náth Harmonier",
+    category: "Site + agenda online",
     description:
-      "Loja de moda fitness com catálogo por grade de tamanhos, sacola e checkout, somada a um painel administrativo para pedidos, produtos e estoque.",
+      "Site para clínica de estética com catálogo de procedimentos e valores, agenda online com horários reais e painel para agenda, preços e relatórios.",
     summary:
-      "Loja e painel de gestão para uma marca de moda fitness, no ar na Cloudflare.",
+      "Presença digital e agenda de uma clínica de harmonização facial em Brasília.",
     technologies: [
       "Next.js",
       "React",
       "TypeScript",
-      "Zustand",
+      "Tailwind CSS",
+      "Framer Motion",
       "Cloudflare Workers",
       "Cloudflare D1",
+      "Drizzle ORM",
     ],
-    image: "/projects/shots/lemos-fit-home.jpg",
+    image: "/projects/shots/nath-home.jpg",
     screenshots: [
-      { src: "/projects/shots/lemos-fit-home.jpg", alt: "Página inicial da loja Lemos Fit", caption: "Home da loja" },
-      { src: "/projects/shots/lemos-fit-catalogo.jpg", alt: "Listagem de produtos por categoria", caption: "Catálogo por categoria" },
-      { src: "/projects/shots/lemos-fit-produto.jpg", alt: "Página de um produto com grade de tamanhos", caption: "Página de produto" },
+      { src: "/projects/shots/nath-home.jpg", alt: "Página inicial da clínica com apresentação da profissional", caption: "Home" },
+      { src: "/projects/shots/nath-procedimentos.jpg", alt: "Catálogo de procedimentos com busca e filtros por especialidade e valor", caption: "Catálogo de procedimentos" },
+      { src: "/projects/shots/nath-agendar.jpg", alt: "Agenda online com escolha de procedimento, dia e horário livre", caption: "Agenda online" },
     ],
-    url: "https://lemos-fit-loja.ygordias442.workers.dev",
-    /* Repositório privado hoje (404 para quem não tem acesso). Se torná-lo
-       público, descomente e o botão volta a aparecer. */
-    // github: "https://github.com/YgorDeveloper/lemos-fit-loja",
+    url: "https://dranathharmonier.com",
     caseStudy: {
-      result:
-        "O pedido passou a se fechar sozinho, sem a troca de mensagens que antecedia cada compra. E o estoque passou a existir por tamanho dentro do sistema, em vez de ser contado de memória — o painel mostra do celular o que vendeu, o que está pendente e o que está acabando.",
       problem:
-        "Toda venda passava pelo direct do Instagram: perguntar preço, combinar pagamento, acertar a entrega e anotar o pedido à mão. O estoque vivia fora de qualquer sistema, contado de memória.",
+        "As pacientes chegam pelo Instagram, no celular e em momentos curtos, com receio de ficar com aparência artificial. Antes de marcar, querem saber o que cada procedimento faz, quanto custa e quanto tempo leva.",
       solution:
-        "Uma loja que fecha a compra sozinha — preço, prazo e disponibilidade por tamanho visíveis antes de a cliente precisar perguntar — e um painel que devolve o controle de pedidos e estoque, operável pelo celular.",
+        "Um site que responde o básico antes da pergunta — cada procedimento com valor, tempo, indicação e cuidados — e uma agenda que mostra só os horários livres, grava a reserva e abre o WhatsApp com a mensagem pronta.",
+      result:
+        "A paciente chega à avaliação já sabendo valor, tempo e cuidados do procedimento, e reserva o horário sem troca de mensagens. Preços, horários e agenda passaram a ser editados pela própria clínica, no painel.",
       features: [
-        "Catálogo com grade de tamanhos e estoque real por tamanho",
-        "Sacola e checkout sem intermediação",
-        "Painel de pedidos com filtro, busca e mudança de situação",
-        "Cadastro de produtos com fotos, preços, categorias e selos",
-        "Dashboard com vendas do dia, pedidos pendentes e faturamento recente",
+        "Catálogo com busca e filtros por especialidade, valor e tempo",
+        "Página própria por procedimento, com indicação, contraindicações e recuperação",
+        "Agenda online que exibe só horários livres e grava a reserva",
+        "Galeria de antes e depois com filtro por especialidade",
+        "Painel com agenda, relatórios, preços e horários de atendimento",
+        "Políticas de agendamento e de privacidade (LGPD)",
       ],
     },
   },
@@ -194,6 +194,82 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "lemos-fit",
+    title: "Lemos Fit",
+    category: "E-commerce",
+    description:
+      "Loja de moda fitness com catálogo por grade de tamanhos, sacola e checkout, somada a um painel administrativo para pedidos, produtos e estoque.",
+    summary:
+      "Loja e painel de gestão para uma marca de moda fitness, no ar na Cloudflare.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Zustand",
+      "Cloudflare Workers",
+      "Cloudflare D1",
+    ],
+    image: "/projects/shots/lemos-fit-home.jpg",
+    screenshots: [
+      { src: "/projects/shots/lemos-fit-home.jpg", alt: "Página inicial da loja Lemos Fit", caption: "Home da loja" },
+      { src: "/projects/shots/lemos-fit-catalogo.jpg", alt: "Listagem de produtos por categoria", caption: "Catálogo por categoria" },
+      { src: "/projects/shots/lemos-fit-produto.jpg", alt: "Página de um produto com grade de tamanhos", caption: "Página de produto" },
+    ],
+    url: "https://lemos-fit-loja.ygordias442.workers.dev",
+    /* Repositório privado hoje (404 para quem não tem acesso). Se torná-lo
+       público, descomente e o botão volta a aparecer. */
+    // github: "https://github.com/YgorDeveloper/lemos-fit-loja",
+    caseStudy: {
+      result:
+        "O pedido passou a se fechar sozinho, sem a troca de mensagens que antecedia cada compra. E o estoque passou a existir por tamanho dentro do sistema, em vez de ser contado de memória — o painel mostra do celular o que vendeu, o que está pendente e o que está acabando.",
+      problem:
+        "Toda venda passava pelo direct do Instagram: perguntar preço, combinar pagamento, acertar a entrega e anotar o pedido à mão. O estoque vivia fora de qualquer sistema, contado de memória.",
+      solution:
+        "Uma loja que fecha a compra sozinha — preço, prazo e disponibilidade por tamanho visíveis antes de a cliente precisar perguntar — e um painel que devolve o controle de pedidos e estoque, operável pelo celular.",
+      features: [
+        "Catálogo com grade de tamanhos e estoque real por tamanho",
+        "Sacola e checkout sem intermediação",
+        "Painel de pedidos com filtro, busca e mudança de situação",
+        "Cadastro de produtos com fotos, preços, categorias e selos",
+        "Dashboard com vendas do dia, pedidos pendentes e faturamento recente",
+      ],
+    },
+  },
+  {
+    slug: "instituto-thalisson-rodrigues",
+    title: "Instituto Thalisson Rodrigues",
+    category: "Site institucional",
+    description:
+      "Site para clínica de fisioterapia ortopédica e esportiva, com mapa do corpo em 3D e caminhos diretos para o WhatsApp.",
+    summary:
+      "Site institucional de uma clínica de fisioterapia em Águas Claras, Brasília.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Three.js",
+      "Cloudflare Pages",
+    ],
+    image: "/projects/shots/thalisson-home.jpg",
+    screenshots: [
+      { src: "/projects/shots/thalisson-home.jpg", alt: "Página inicial da clínica de fisioterapia", caption: "Home" },
+    ],
+    url: "https://institutothalissonrodrigues.pages.dev",
+    caseStudy: {
+      solution:
+        "Um site estático, sem servidor para manter, que leva o paciente das especialidades até o WhatsApp em poucos toques, com a mensagem de contato já pronta para cada caminho.",
+      features: [
+        "Mapa do corpo em 3D com as regiões tratadas, condições e abordagem",
+        "Especialidades e método de tratamento em etapas",
+        "Galeria do consultório e depoimentos",
+        "Perguntas frequentes e posts do Instagram",
+        "Mensagens de WhatsApp configuradas por contexto",
+      ],
+    },
+  },
+  {
     slug: "mineiro-motos",
     title: "Mineiro Motos",
     category: "Sistema de gestão",
@@ -241,25 +317,6 @@ export const projects: Project[] = [
       ],
       challenges: [
         "Três perfis de uso no mesmo sistema: dono, atendente no balcão e mecânico na oficina",
-      ],
-    },
-  },
-  {
-    slug: "biomessenger",
-    title: "Biomessenger",
-    category: "Sistema / Integração",
-    description:
-      "Soluções relacionadas ao gerenciamento de controle de acesso, comunicação com equipamentos e integração entre serviços.",
-    summary:
-      "Camada de integração entre serviços e equipamentos de controle de acesso.",
-    technologies: ["Bun", "TypeScript", "TCP", "PostgreSQL", "Redis", "APIs"],
-    image: "/projects/biomessenger.jpg",
-    imageFit: "contain",
-    caseStudy: {
-      features: [
-        "Gerenciamento de controle de acesso",
-        "Comunicação com equipamentos",
-        "Integração entre serviços",
       ],
     },
   },

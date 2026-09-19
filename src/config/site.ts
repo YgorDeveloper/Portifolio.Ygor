@@ -1,44 +1,32 @@
 /* -------------------------------------------------------------------------- */
 /*  CONFIGURAÇÃO DO SITE                                                       */
 /*                                                                            */
-/*  Este é o único arquivo que precisa ser editado para colocar o portfólio    */
-/*  no ar com os seus dados reais.                                            */
-/*                                                                            */
-/*  Tudo que está marcado com [PREENCHER] usa um valor de exemplo e deve ser   */
-/*  substituído. Links com valor `null` simplesmente não aparecem na           */
-/*  interface — nada quebra enquanto você não preencher.                      */
+/*  O nome do estúdio vive em `brand`: trocar aqui atualiza navbar, rodapé,    */
+/*  metadata e imagem de compartilhamento.                                    */
 /* -------------------------------------------------------------------------- */
 
 export const siteConfig = {
+  /** Responsável pelo estúdio — usado como autor nos metadados. */
   name: "Ygor Dias",
   brand: "YGOR.DEV",
-  role: "Profissional de Tecnologia & Desenvolvedor",
+  tagline: "Sites, lojas e sistemas sob medida",
   description:
-    "Portfólio de Ygor Dias, profissional de tecnologia com experiência em suporte, sistemas, integrações e desenvolvimento de aplicações web.",
+    "Estúdio de desenvolvimento web: sites, e-commerces, agendamento online e sistemas de gestão, do projeto à publicação.",
 
   /** Domínio do site. Usado em metadata, sitemap e Open Graph. */
   url: "https://ygordev.pages.dev",
 
-  /** Disponibilidade exibida no hero. Altere o texto ou coloque `available: false`. */
+  /** Disponibilidade exibida no hero e no contato. */
   availability: {
     available: true,
-    label: "Disponível para novos projetos",
+    label: "Agenda aberta para novos projetos",
   },
-
-  /**
-   * [PREENCHER] Foto de perfil.
-   * O arquivo esperado é `public/images/ygor.jpg` (retrato, proporção 4:5).
-   * Se o arquivo não existir, o placeholder aparece no lugar — nada quebra.
-   */
-  photo: "/images/ygor.jpg" as string | null,
 } as const;
 
 /* -------------------------------------------------------------------------- */
 /*  CONTATO E REDES                                                            */
 /*                                                                            */
-/*  Os valores em MAIÚSCULAS são placeholders — troque pelos links reais.      */
-/*  Se preferir esconder uma rede, basta trocar o href por `null`: itens com   */
-/*  href nulo não são renderizados em lugar nenhum.                            */
+/*  Itens com `href: null` não são renderizados em lugar nenhum.               */
 /* -------------------------------------------------------------------------- */
 
 export type SocialKey = "email" | "whatsapp" | "github" | "linkedin" | "instagram";
@@ -64,7 +52,6 @@ export const socialLinks: SocialLink[] = [
     label: "WhatsApp",
     handle: "Conversa direta",
     // Desativado por escolha: com href nulo o item não aparece em lugar nenhum.
-    // Para reativar depois, basta trocar por "https://wa.me/55DDDNUMERO".
     href: null,
   },
   {
@@ -97,8 +84,8 @@ export const activeSocialLinks = socialLinks.filter(
 /* -------------------------------------------------------------------------- */
 
 export const navItems = [
-  { label: "Sobre", href: "#sobre", id: "sobre" },
-  { label: "Experiência", href: "#experiencia", id: "experiencia" },
   { label: "Projetos", href: "#projetos", id: "projetos" },
+  { label: "Serviços", href: "#servicos", id: "servicos" },
+  { label: "Processo", href: "#processo", id: "processo" },
   { label: "Contato", href: "#contato", id: "contato" },
 ] as const;

@@ -7,7 +7,7 @@ export const dynamic = "force-static";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = `${siteConfig.name} — ${siteConfig.role}`;
+export const alt = `${siteConfig.brand} — ${siteConfig.tagline}`;
 
 /** Imagem de compartilhamento (WhatsApp, LinkedIn, X). Gerada no build. */
 export default function OpengraphImage() {
@@ -55,7 +55,7 @@ export default function OpengraphImage() {
               lineHeight: 1,
             }}
           >
-            Ygor Dias
+            Sites, lojas e sistemas
           </div>
           <div
             style={{
@@ -65,7 +65,7 @@ export default function OpengraphImage() {
               color: "#a0a0ac",
             }}
           >
-            Profissional de Tecnologia &amp; Desenvolvedor
+            que trabalham pelo seu negócio.
           </div>
         </div>
 
@@ -81,7 +81,7 @@ export default function OpengraphImage() {
           }}
         >
           <div style={{ display: "flex" }}>
-            Suporte · Sistemas · Integrações · Desenvolvimento
+            Sites · E-commerce · Sistemas · Agendamento
           </div>
           <div style={{ display: "flex", color: "#e0a458" }}>
             Next.js · TypeScript · Cloudflare
