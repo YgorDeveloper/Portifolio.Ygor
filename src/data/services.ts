@@ -9,7 +9,7 @@ export type Service = {
   id: string;
   title: string;
   description: string;
-  icon: "globe" | "cart" | "layers" | "calendar";
+  icon: "globe" | "cart" | "layers" | "calendar" | "app";
   /** Slugs de `projects` que exemplificam o serviço. */
   proof: string[];
 };
@@ -21,7 +21,7 @@ export const services: Service[] = [
     description:
       "Presença profissional que responde o básico antes da pergunta e leva a visita até o contato, com SEO e carregamento rápido.",
     icon: "globe",
-    proof: ["dra-nath-harmonier", "instituto-thalisson-rodrigues"],
+    proof: ["dra-nath-harmonier", "instituto-thalisson-rodrigues", "new-studio"],
   },
   {
     id: "ecommerce",
@@ -46,5 +46,13 @@ export const services: Service[] = [
       "Agenda online que mostra só horários livres e painel para o próprio negócio cuidar de preços, horários e relatórios.",
     icon: "calendar",
     proof: ["dra-nath-harmonier"],
+  },
+  {
+    id: "apps",
+    title: "Aplicativos para o cliente final",
+    description:
+      "App que instala na tela inicial do celular, sem loja de aplicativos: acesso por código, conteúdo em vídeo, lembrete por notificação e painel de acompanhamento.",
+    icon: "app",
+    proof: ["kit-mobilidade"],
   },
 ];

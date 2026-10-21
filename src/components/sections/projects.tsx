@@ -10,7 +10,7 @@ export function Projects() {
       index="01"
       label="Projetos"
       title="Projetos no portfólio."
-      description="Lojas, sites e sistemas em produção — do catálogo de sneakers à agenda de uma clínica. Cada card abre o case completo."
+      description="Lojas, sites, sistemas e aplicativos em produção — do catálogo de sneakers ao app que vem dentro de uma caixa. Cada card abre o case completo."
     >
       <div className="flex flex-col gap-5 lg:gap-6">
         {projects.map((project, index) => (

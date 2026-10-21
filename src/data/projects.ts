@@ -101,6 +101,127 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "kit-mobilidade",
+    title: "Kit Mobilidade",
+    category: "App (PWA) + painel",
+    description:
+      "App que acompanha um kit físico de fisioterapia: o QR da caixa libera o plano de exercícios em vídeo, e o painel mostra ao fisioterapeuta quem evoluiu e quem está com dor.",
+    summary:
+      "Produto digital do Instituto Thalisson Rodrigues, entregue dentro de uma caixa.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Hono",
+      "Cloudflare Workers",
+      "Cloudflare D1",
+      "Drizzle ORM",
+      "PWA",
+      "Web Push",
+    ],
+    image: "/projects/shots/km-cover.jpg",
+    screenshots: [
+      { src: "/projects/shots/km-app.jpg", alt: "Telas do app do paciente: ativação pelo QR, plano de mobilidade e exercício com vídeo", caption: "App do paciente" },
+      { src: "/projects/shots/km-painel.jpg", alt: "Painel do fisioterapeuta com kits ativados, alertas de dor e últimos feedbacks", caption: "Painel do fisioterapeuta" },
+      { src: "/projects/shots/km-lotes.jpg", alt: "Geração de lotes de QR code com prévia da etiqueta e exportação em PDF", caption: "Lotes de QR e etiquetas" },
+    ],
+    caseStudy: {
+      problem:
+        "O kit de fisioterapia em casa é um produto físico, e o que vem dentro da caixa é papel. O paciente sai do consultório sabendo o que fazer e, três dias depois, não lembra como era o movimento. Vídeo solto no WhatsApp se perde na conversa, e o fisioterapeuta só descobre que alguém parou — ou está sentindo dor — quando o paciente volta.",
+      solution:
+        "Cada caixa sai com um QR único. O paciente lê, cria o acesso com WhatsApp e um PIN de quatro dígitos, e a partir daí tem o plano inteiro no celular, em vídeo, para sempre. Ao terminar o dia ele responde dor e dificuldade, e é isso que vira alerta no painel do fisioterapeuta.",
+      features: [
+        "Ativação por QR: um código por kit, acesso vitalício para quem ativou",
+        "Entrada por WhatsApp e PIN para quem jogou a caixa fora",
+        "Plano de 4 semanas × 5 dias, com o dia seguinte liberando só depois do anterior",
+        "Exercício com vídeo, repetições e dica, um de cada vez",
+        "Feedback de dor de 0 a 10 ao fechar o dia, com alerta no painel a partir de 7",
+        "Lembrete diário por notificação, sem precisar de aplicativo na loja",
+        "Lotes de QR gerados no painel, com PDF de etiquetas pronto para imprimir",
+        "Instalável na tela inicial do celular, abre como aplicativo",
+      ],
+      challenges: [
+        "Liberação em sequência validada no servidor: pular dia pela URL não funciona",
+        "PIN com hash PBKDF2-SHA256 e bloqueio após cinco tentativas, dentro do limite de CPU do Worker",
+        "Vídeo entregue só para paciente autenticado e com o dia já liberado",
+      ],
+      result:
+        "O kit deixou de ser uma caixa com papel e virou um acompanhamento de quatro semanas que o paciente carrega no bolso. O fisioterapeuta abre o painel e vê quem está em dia, quem parou e quem relatou dor alta, sem precisar perguntar um por um.",
+    },
+  },
+  {
+    slug: "instituto-thalisson-rodrigues",
+    title: "Instituto Thalisson Rodrigues",
+    category: "Site institucional",
+    description:
+      "Site para clínica de fisioterapia ortopédica e esportiva, com mapa do corpo em 3D e caminhos diretos para o WhatsApp.",
+    summary:
+      "Site institucional de uma clínica de fisioterapia em Águas Claras, Brasília.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Three.js",
+      "Cloudflare Pages",
+    ],
+    image: "/projects/shots/thalisson-home.jpg",
+    screenshots: [
+      { src: "/projects/shots/thalisson-home.jpg", alt: "Página inicial da clínica de fisioterapia", caption: "Home" },
+    ],
+    url: "https://institutothalissonrodrigues.pages.dev",
+    caseStudy: {
+      solution:
+        "Um site estático, sem servidor para manter, que leva o paciente das especialidades até o WhatsApp em poucos toques, com a mensagem de contato já pronta para cada caminho.",
+      features: [
+        "Mapa do corpo em 3D com as regiões tratadas, condições e abordagem",
+        "Especialidades e método de tratamento em etapas",
+        "Galeria do consultório e depoimentos",
+        "Perguntas frequentes e posts do Instagram",
+        "Mensagens de WhatsApp configuradas por contexto",
+      ],
+    },
+  },
+  {
+    slug: "new-studio",
+    title: "New Studio",
+    category: "Site institucional",
+    description:
+      "Site da agência: serviços, projetos, investimento e um briefing que chega organizado, no lugar do formulário de contato de três linhas.",
+    summary:
+      "Site de uma agência digital de Brasília, com produtora de conteúdo dentro.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Cloudflare Workers",
+      "Cloudflare D1",
+      "Drizzle ORM",
+    ],
+    image: "/projects/shots/ns-home.jpg",
+    screenshots: [
+      { src: "/projects/shots/ns-home.jpg", alt: "Página inicial da agência com a chamada principal e painéis de sistema", caption: "Home" },
+      { src: "/projects/shots/ns-servicos.jpg", alt: "Página de serviços da agência", caption: "Serviços" },
+      { src: "/projects/shots/ns-projetos.jpg", alt: "Página de projetos da agência", caption: "Projetos" },
+    ],
+    url: "https://new-studio.agencianewstudio.workers.dev",
+    caseStudy: {
+      solution:
+        "Um site que trata o primeiro contato como parte do trabalho: quem quer conversar agora vai pelo WhatsApp, e quem quer proposta preenche um briefing que já chega com contexto suficiente para responder com preço.",
+      features: [
+        "Home com serviços, processo, investimento e perguntas frequentes",
+        "Briefing completo no lugar do formulário curto de contato",
+        "Páginas de proposta para enviar ao cliente",
+        "Área interna, com login, para a equipe acompanhar o que chega",
+        "Só números que o visitante consegue conferir sozinho",
+      ],
+    },
+  },
+  {
     slug: "dra-nath-harmonier",
     title: "Drª Náth Harmonier",
     category: "Site + agenda online",
@@ -232,40 +353,6 @@ export const projects: Project[] = [
         "Painel de pedidos com filtro, busca e mudança de situação",
         "Cadastro de produtos com fotos, preços, categorias e selos",
         "Dashboard com vendas do dia, pedidos pendentes e faturamento recente",
-      ],
-    },
-  },
-  {
-    slug: "instituto-thalisson-rodrigues",
-    title: "Instituto Thalisson Rodrigues",
-    category: "Site institucional",
-    description:
-      "Site para clínica de fisioterapia ortopédica e esportiva, com mapa do corpo em 3D e caminhos diretos para o WhatsApp.",
-    summary:
-      "Site institucional de uma clínica de fisioterapia em Águas Claras, Brasília.",
-    technologies: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Three.js",
-      "Cloudflare Pages",
-    ],
-    image: "/projects/shots/thalisson-home.jpg",
-    screenshots: [
-      { src: "/projects/shots/thalisson-home.jpg", alt: "Página inicial da clínica de fisioterapia", caption: "Home" },
-    ],
-    url: "https://institutothalissonrodrigues.pages.dev",
-    caseStudy: {
-      solution:
-        "Um site estático, sem servidor para manter, que leva o paciente das especialidades até o WhatsApp em poucos toques, com a mensagem de contato já pronta para cada caminho.",
-      features: [
-        "Mapa do corpo em 3D com as regiões tratadas, condições e abordagem",
-        "Especialidades e método de tratamento em etapas",
-        "Galeria do consultório e depoimentos",
-        "Perguntas frequentes e posts do Instagram",
-        "Mensagens de WhatsApp configuradas por contexto",
       ],
     },
   },

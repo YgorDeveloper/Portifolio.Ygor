@@ -1,4 +1,4 @@
-import { CalendarDays, Globe, Layers, ShoppingCart } from "lucide-react";
+import { CalendarDays, Globe, Layers, ShoppingCart, Smartphone } from "lucide-react";
 import Link from "next/link";
 import type { ComponentType, SVGProps } from "react";
 
@@ -12,6 +12,7 @@ const icons: Record<Service["icon"], ComponentType<SVGProps<SVGSVGElement>>> = {
   cart: ShoppingCart,
   layers: Layers,
   calendar: CalendarDays,
+  app: Smartphone,
 };
 
 const titleBySlug = new Map(projects.map((p) => [p.slug, p.title]));
@@ -23,14 +24,20 @@ export function Services() {
       index="02"
       label="Serviços"
       title="O que o estúdio entrega."
-      description="Quatro frentes, cada uma com projeto real no portfólio para mostrar como fica."
+      description="Cinco frentes, cada uma com projeto real no portfólio para mostrar como fica."
     >
       <div className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2">
         {services.map((service, index) => {
           const Icon = icons[service.icon];
 
           return (
-            <Reveal key={service.id} delay={index * 0.06} className="min-w-0">
+            // Em número ímpar de serviços, o último ocupa a linha inteira em
+            // vez de deixar meia célula vazia dentro da moldura.
+            <Reveal
+              key={service.id}
+              delay={index * 0.06}
+              className="min-w-0 sm:last:odd:col-span-2"
+            >
               <article className="group flex h-full flex-col bg-bg p-6 transition-colors duration-300 hover:bg-surface sm:p-8">
                 <span className="flex size-10 items-center justify-center rounded-lg border border-line bg-bg-soft text-muted transition-colors duration-300 group-hover:border-accent/30 group-hover:text-accent">
                   <Icon className="size-[18px]" strokeWidth={1.5} />
