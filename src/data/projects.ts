@@ -407,6 +407,48 @@ export const projects: Project[] = [
       ],
     },
   },
+  {
+    slug: "conect-imports",
+    title: "Conect Imports",
+    category: "Demonstração",
+    description:
+      "Loja de celulares fictícia, feita para mostrar como funciona um catálogo que o próprio dono alimenta: produtos, fotos, unidades e avaliações saem do painel direto para o site.",
+    summary:
+      "Loja fictícia criada para o portfólio — nada é vendido no site.",
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Cloudflare Pages",
+      "Cloudflare Functions",
+      "Cloudflare D1",
+    ],
+    image: "/projects/shots/ci-home.jpg",
+    screenshots: [
+      { src: "/projects/shots/ci-home.jpg", alt: "Página inicial da loja de demonstração, com aviso de que é um site fictício", caption: "Home" },
+      { src: "/projects/shots/ci-loja.jpg", alt: "Catálogo com filtros por marca e categoria", caption: "Catálogo" },
+      { src: "/projects/shots/ci-produto.jpg", alt: "Página de um celular com galeria, cores, garantia e ficha técnica", caption: "Página do produto" },
+      { src: "/projects/shots/ci-admin.jpg", alt: "Painel administrativo com a lista de produtos, destaque e ordem de exibição", caption: "Painel da loja" },
+    ],
+    url: "https://conect-imports.pages.dev",
+    caseStudy: {
+      solution:
+        "Uma loja de demonstração, com marca inventada, para mostrar o modelo inteiro funcionando antes de existir cliente: site rápido na frente, painel simples atrás, tudo publicado na Cloudflare sem servidor para manter. O site avisa no topo de todas as páginas que é fictício e que nada é vendido ali.",
+      features: [
+        "Catálogo com filtro por marca, categoria e situação",
+        "Página própria de cada produto, com endereço gerado pelo nome",
+        "Galeria com até 12 fotos, cores, garantia e ficha técnica",
+        "Painel para cadastrar, duplicar, esconder, destacar e reordenar produtos",
+        "Unidades da loja com foto, endereço, horário e link do mapa",
+        "Avaliações de clientes e números do site editáveis pelo painel",
+        "Botões de WhatsApp em cada produto e em cada unidade",
+      ],
+      challenges: [
+        "Front sem framework: HTML, CSS e JavaScript puros, para o site abrir rápido em celular simples",
+        "Fotos comprimidas em WebP no próprio navegador antes de subir, guardadas no banco",
+      ],
+    },
+  },
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {
