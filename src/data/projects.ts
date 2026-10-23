@@ -222,6 +222,41 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "fs-advocacia",
+    title: "FS Advocacia",
+    category: "Site institucional",
+    description:
+      "Site do advogado Fernando Silva. Cada área de atuação abre com a lista de documentos que costumam ser pedidos, e o visitante marca o que já tem antes de puxar a conversa no WhatsApp.",
+    summary:
+      "Site institucional de advogado em Brasília, com atendimento on-line para todo o Brasil.",
+    technologies: ["HTML", "CSS", "JavaScript", "Cloudflare Pages"],
+    image: "/projects/shots/fs-home.jpg",
+    screenshots: [
+      { src: "/projects/shots/fs-home.jpg", alt: "Página inicial do escritório, com o monograma FS e o retrato do advogado", caption: "Home" },
+      { src: "/projects/shots/fs-checklist.jpg", alt: "Área de inventário aberta, com as situações que cobre e a lista de documentos para marcar", caption: "Checklist de documentos" },
+      { src: "/projects/shots/fs-contato-passos.jpg", alt: "Os três passos do primeiro contato, do relato à proposta por escrito", caption: "O primeiro contato" },
+      { src: "/projects/shots/fs-compositor.jpg", alt: "Formulário que monta a mensagem de WhatsApp e os dois números de contato", caption: "Compositor de mensagem" },
+    ],
+    url: "https://fs-advocacia.pages.dev",
+    caseStudy: {
+      problem:
+        "A primeira conversa com advogado costuma começar no escuro: a pessoa não sabe o que contar nem o que separar, e gasta duas ou três rodadas de mensagem só para chegar na documentação.",
+      solution:
+        "Um site estático, sem build e sem backend, onde cada área de atuação abre em duas colunas: as situações que ela cobre e os documentos que costumam ser pedidos. O visitante marca o que já tem em mãos e o botão de WhatsApp monta a mensagem com essa informação, então o primeiro contato já chega com contexto. Nada do que ele digita sai do navegador.",
+      features: [
+        "Checklist de documentos por área, com lista copiável para as notas do celular",
+        "Compositor de mensagem: assunto, resumo e escolha de com quem falar",
+        "Link direto para uma área, para mandar alguém ao ponto certo",
+        "Cinco áreas de atuação em acordeão, com as situações que cada uma cobre",
+        "Dois canais de WhatsApp separados, advogado e equipe",
+      ],
+      challenges: [
+        "Identidade tirada do avatar original da marca: monograma recortado do próprio arquivo e cores amostradas dele, sem redesenhar a logo nem retocar a fotografia",
+        "Acessibilidade: foco visível, painéis fechados com inert fora da ordem do Tab, confirmação de cópia anunciada por leitor de tela e contraste conferido em AA",
+      ],
+    },
+  },
+  {
     slug: "dra-nath-harmonier",
     title: "Drª Náth Harmonier",
     category: "Site + agenda online",
